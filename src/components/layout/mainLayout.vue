@@ -9,7 +9,13 @@ export default defineComponent({
   setup() {
     const data = {
         a: {
-            c: 123
+            c: 123,
+            d: {
+              name: '冯建军',
+              data: {
+                v: 'node'
+              }
+            }
         },
         b: ['begonia', '哈哈哈'],
         d: {
@@ -25,7 +31,7 @@ export default defineComponent({
         f: [[123], [[345, 678]]]
     }
 
-    const getData = (obj) => {
+    const getData = (obj: Object) => {
       const res = {}
       const data = Object.entries(obj)
       const is = type => (data) => Object.prototype.toString.call(data) == `[object ${type}]`
