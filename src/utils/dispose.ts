@@ -3,13 +3,15 @@
 /**
  * 对象扁平化
  * 
- */
-
+*/
+type Res = {
+  [propName: string]: any
+}
 
 export const flatData = (obj: object): object => {
-  const res: object = {}
+  const res: Res = {}
   const data: Array<[string, any]> = Object.entries(obj)
-  const is = (type: string) => (data: object) => Object.prototype.toString.call(data) == `[object ${type}]`
+  const is = (type: 'Array' | 'Object') => (data: any) => Object.prototype.toString.call(data) == `[object ${type}]`
   const isArray = is('Array')
   const isObject = is('Object')
   while (data.length > 0) {
@@ -20,7 +22,8 @@ export const flatData = (obj: object): object => {
         data.unshift(...v.map((item: any, i: number): Array<[string, any]> => [`${k}[${i}]`, item]))
         break
       case isObject(v):
-        data.unshift(...Object.entries(v).map(([kk, v]) => [`${k}.${kk}`, v]))
+        
+        data.unshift(...Object.entries<any>(v).map(([kk, v]): [string, any] => [`${k}.${kk}`, v])) 
         break
       default:
         res[k] = v
