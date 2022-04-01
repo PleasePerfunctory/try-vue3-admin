@@ -53,6 +53,21 @@ export default defineComponent({
       }
       return res
     }
+    function clone(target: any, map = new Map()): object {
+      if (typeof target === 'object') {
+        let cloneTarget: any = Array.isArray(target) ? [] : {};
+        if (map.get(target)) {
+          return map.get(target);
+        }
+        map.set(target, cloneTarget);
+        for (const key in target) {
+          cloneTarget[key] = clone(target[key], map);
+        }
+        return cloneTarget;
+      } else {
+        return target;
+      }
+    };
     console.log(getData(data))
   }
 })
