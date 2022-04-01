@@ -1,35 +1,22 @@
 <template>
-  <section>
-    Vue3 + TypeScript + pinia + ElementPlus
+  <section class="layout-main-wrap">
+    <nav-bar />
   </section>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'
+import NavBar from './nav-bar.vue'
 export default defineComponent({
+  components: { NavBar },
   setup() {
-    const data = {
-        a: {
-            c: 123,
-            d: {
-              name: '冯建军',
-              data: {
-                v: 'node'
-              }
-            }
-        },
-        b: ['begonia', '哈哈哈'],
-        d: {
-            c: [1, 2, 3]
-        },
-        e: [{
-            name: "begonia",
-            age: 18
-        }, {
-            name: "windy",
-            age: 18
-        }],
-        f: [[123], [[345, 678]]]
-    }
+    
   }
 })
 </script>
+<style lang="scss" scoped>
+  .layout-main-wrap{
+    width: 100%;
+    height: 100%;
+    // display: flex;
+  }
+</style>
