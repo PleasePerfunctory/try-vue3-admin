@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prettier:comment": "自动格式化当前目录下所有的文件",
+    "prettier": "prettier --write"
   },
   "dependencies": {
     "@types/node": "^17.0.23",
@@ -15,7 +17,14 @@
     "vue-router": "4"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
     "@vitejs/plugin-vue": "^2.2.0",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "prettier": "^2.6.2",
     "sass": "^1.49.9",
     "typescript": "^4.6.3",
     "unplugin-auto-import": "^0.6.6",
