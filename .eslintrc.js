@@ -8,12 +8,7 @@ module.exports = {
       jsx: true,
     },
   },
-  extends: [
-    'plugin:vue/vue3-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
-    'prettier',
-  ],
+  extends: ['@antfu'],
   plugins: ['vue', '@typescript-eslint'],
   rules: {},
-};
+}

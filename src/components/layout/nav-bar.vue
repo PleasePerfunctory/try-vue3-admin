@@ -1,18 +1,20 @@
-<template>
-  <nav class="main-nav">
-    <div class="logo-container"></div>
-    <div class="micro-user-container">
-      <MicroBar />
-    </div>
-  </nav>
-</template>
 <script lang="ts">
-  import MicroBar from './micro-bar.vue';
-  import { defineComponent } from 'vue';
-  export default defineComponent({
-    components: { MicroBar },
-  });
+import { defineComponent } from 'vue'
+import MicroBar from './micro-bar.vue'
+export default defineComponent({
+  components: { MicroBar },
+})
 </script>
+
+<template>
+  <header class="main-nav">
+    <div class="logo-container" />
+    <nav class="micro-user-container">
+      <micro-bar />
+    </nav>
+  </header>
+</template>
+
 <style lang="scss" scoped>
   .main-nav {
     height: 72px;

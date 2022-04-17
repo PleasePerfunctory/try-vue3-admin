@@ -1,3 +1,5 @@
+// ! 使用antfu大佬配置的eslit，大佬觉得prettier太过于死板所以不使用。
+
 module.exports = {
   // 一行最多 80 个字符
   printWidth: 80,

@@ -12,3 +12,10 @@ npm run dev
 npm run dev
 ```
 ### 个人技术有限处于学习阶段，如有屎山请各位谅解
+
+
+
+
+## 使用的一些插件
+
+@antfu/eslint/config https://github.com/antfu/eslint-config

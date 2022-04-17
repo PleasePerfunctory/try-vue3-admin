@@ -1,9 +1,11 @@
+<script lang="ts"></script>
+
 <template>
   <section class="login-wrap">
-    <div class="fixed-filter-model"></div>
+    <div class="fixed-filter-model" />
   </section>
 </template>
-<script lang="ts"></script>
+
 <style lang="scss" scoped>
   @property --perA {
     syntax: '<percentage>';

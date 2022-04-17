@@ -5,7 +5,8 @@
 declare module 'vue' {
   export interface GlobalComponents {
     LoginPage: typeof import('./src/components/login-page.vue')['default']
-    MainLayout: typeof import('./src/components/layout/mainLayout.vue')['default']
+    MainAside: typeof import('./src/components/layout/main-aside.vue')['default']
+    MainLayout: typeof import('./src/components/layout/main-layout.vue')['default']
     MicroBar: typeof import('./src/components/layout/micro-bar.vue')['default']
     NavBar: typeof import('./src/components/layout/nav-bar.vue')['default']
   }
