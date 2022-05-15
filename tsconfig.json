@@ -9,7 +9,7 @@
     "moduleResolution": "node",
     "baseUrl": "./", // 路径解析起点
     "paths": { // 配置路径别名防止ts中使用别报警告
-      "@*": ["src/*"]
+      "@/*": ["src/*"]
     },
     "types": [
       "vite/client"
